@@ -45,7 +45,7 @@ public class ProductControllerTest {
     private WebApplicationContext context;
 
     @Mock
-    private DataAccessObject<Map<String, String>> productAttributesDAO;
+    private DataAccessObject productAttributesDAO;
 
     @Autowired
     @InjectMocks

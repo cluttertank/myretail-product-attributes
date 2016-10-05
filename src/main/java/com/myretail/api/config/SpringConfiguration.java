@@ -22,8 +22,8 @@ public class SpringConfiguration {
     
     @Bean
     @Autowired
-    public DataAccessObject<Map<String, String>> productAttributesDAO(DataStore dataStore) {
-        return new MappedObjectDAO<>("product-attributes", dataStore);
+    public DataAccessObject productAttributesDAO(DataStore dataStore) {
+        return new MappedObjectDAO("product-attributes", dataStore);
     }
     
 }

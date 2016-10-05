@@ -24,7 +24,7 @@ public class ProductService {
     private static final Logger LOGGER = LoggerFactory.getLogger(ProductService.class);
 
     @Autowired
-    private DataAccessObject<Map<String, String>> productAttributesDAO;
+    private DataAccessObject productAttributesDAO;
     
     public Observable<ProductAttributes> getProductAttributes(final BigInteger productId, final String ids) {
         return new CircuitCommand<Map<String, String>>("GetProductAttributes",

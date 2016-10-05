@@ -17,7 +17,6 @@ import com.myretail.api.model.ProductAttributes;
 import com.myretail.api.service.ProductService;
 
 @RestController
-@RequestMapping("/")
 public class ProductController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ProductController.class);
@@ -25,7 +24,7 @@ public class ProductController {
     @Autowired
     ProductService productService;
 
-    @RequestMapping(value = { "product/{productId}/fields" }, method = { RequestMethod.GET }, produces = { MediaType.APPLICATION_JSON_VALUE } )
+    @RequestMapping(value = { "/product/{productId}/fields" }, method = { RequestMethod.GET }, produces = { MediaType.APPLICATION_JSON_VALUE } )
     public DeferredResult<ProductAttributes> getProduct( @PathVariable BigInteger productId,
             @RequestParam("ids") String ids) {
         
